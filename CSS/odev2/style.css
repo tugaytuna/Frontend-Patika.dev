@@ -1,0 +1,56 @@
+header {
+    margin: 10px 10px 10px 10px;
+    border: 3px;
+    padding: 3px 3px 3px 3px;
+}
+
+h1 {
+    font-size: 24px;
+    font-style: normal;
+    text-align: center;
+}
+
+
+img {
+    margin-left: 40%;
+}
+
+.searchbutton {
+    margin: 0 50% 10px auto;
+    padding: 0 0 0 50%;
+
+}
+
+.layout {
+    margin: 10px auto 10px auto;
+    background-color: rgb(218, 218, 218);
+}
+
+
+
+#marginbutton {
+    width: 150px;
+    height: 20px;
+    float: right;
+}
+
+#marginbuttonLuck {
+    width: 300px;
+    height: 20px;
+}
+
+#div1 {
+    margin: 0 66% 0 0;
+    background-color: cyan;
+}
+
+#div2 {
+    margin: -55px 33% 0 35%;
+    background-color: rgb(112, 243, 243);
+    
+}
+
+#div3 {
+    margin: -55px 1% 0 69%;
+    background-color: rgb(187, 241, 241);
+}
