@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <title>Yapılacaklar Listesi</title>
+  </head>
+  <body>
+    <div class="mr-1" style="position: relative">
+      <div style="position: absolute; top: 0; right: 0">
+        <div
+          id="liveToast"
+          class="toast success hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+          data-delay="4000"
+        >
+          <div>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="toast"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">Listeye eklendi.</div>
+        </div>
+      </div>
+    </div>
+    <div class="mr-1" style="position: relative">
+      <div style="position: absolute; top: 0; right: 0">
+        <div
+          id="liveToast"
+          class="toast error hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+          data-delay="4000"
+        >
+          <div>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="toast"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">Listeye boş ekleme yapamazsınız!</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="header" style="background-color: rgb(252, 192, 26);">
+        <img
+          src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png"
+          class="mb-1 d-block mx-auto "
+          alt=""
+        />
+        <h2 style="text-align: center;" class="mb-4">Yapılacaklar Listesi</h2>
+        <div class="input-group mb-3">
+          <input id="task" type="text" class="form-control" placeholder="Bugün ne yapacaksın?" aria-label="Bugün ne yapacaksın?" aria-describedby="button-addon2">
+          <button onclick="newElement()" class="btn btn-success" type="button" id="liveToastBtn">Ekle</button>
+        </div>
+      </div>
+
+      
+
+      <ul id="list" class="list-group">
+        <!-- <li class="list-group-item">
+          <input  class="mr-5 btn btn-primary col-2" type="button" onclick="check()" value="Tamamlandı" id="gorev1">
+          <label onclick="clickTask()" class="form-check-label stretched-link" for="firstCheckboxStretched">3 Litre Su İç</label>
+        </li> -->
+        <li class="list-group-item">
+          <input class="form-check-input me-1"  type="checkbox" value="" id="gorev2">
+          <label onclick="clickTask()" class="form-check-label stretched-link" for="secondCheckboxStretched">Ödevleri Yap</label>
+        </li>
+        <li class="list-group-item">
+          <input class="form-check-input me-1" type="checkbox" value="" id="gorev3">
+          <label onclick="clickTask()" class="form-check-label stretched-link" for="thirdCheckboxStretched">En Az 3 Saat Kodlama Yap</label>
+        </li>
+      </ul>
+
+      <div class="container col-4">
+        <button onclick="deleteItems()" class="btn btn-danger mt-2">Seçili Olanları Temizle</button>
+      </div>
+
+      <script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"
+      ></script>
+      <script src="kod.js"></script>
+    </div>
+  </body>
+</html>
