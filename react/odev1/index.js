@@ -1,1 +1,4 @@
-console.log("hello world")
+import getData from "./app.js";
+
+
+getData(1)
