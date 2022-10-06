@@ -1,11 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+
+import {ChatProvider} from './context/ChatContext';
+
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <>
+      <ChatProvider>selam</ChatProvider>
+      </>
   );
 }
 
