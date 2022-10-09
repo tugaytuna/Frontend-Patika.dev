@@ -20,17 +20,31 @@ describe("First Test",() => {
         searchText = screen.getByTestId("searchText")
     })
 
-    
+    test('header', () => {
+        const headerTitle = screen.getByText('Emoji Search');
+        expect(headerTitle).toBeInTheDocument;
+      });
+
+    test("listed all emojies",() => {
+        const listOfEmojies = screen.getAllByText("Click to copy emoji")
+        expect(listOfEmojies.length).toEqual(20);
+    })
+
 
     test('Search Something', () => { 
         const emoji = '100';
-        userEvent.type(searchText, emoji);
+        // userEvent.type(searchText, emoji);
         // expect(screen.getByText(emoji)).toBeInTheDocument;
-        expect(screen.getByText(emoji)).toBeInTheDocument;
+        render(<EmojiResults emojiData={filterEmoji("smile", 20)} />)
+        const emojiList = screen.getAllByText("Click to copy emoji");
+        expect(emojiList.length).toBeGreaterThan(1);
      })
 
 
-    
-    test("should second",() => {console.log("done 2")})
+     test('copy', () => {
+        const click = screen.getAllByText('Click to copy emoji').at(0);
+        const parent = click.parentElement;
+        expect(parent.getAttribute('data-clipboard-text').length).toBeGreaterThan(0);
+      });
     
 })
