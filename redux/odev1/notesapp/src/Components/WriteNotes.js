@@ -33,8 +33,26 @@ const colors = [{
 },]
 
 function WriteNotes() {
-  const [selected, setSelected] = useState(colors[3])
 
+  const [selected, setSelected] = useState(colors[3])
+  const [newNoteT, setnewNoteT] = useState("")
+
+  const addNoteClick = () => {
+    console.log("clicked");
+  }
+
+  const changeText = (e) => {
+    if (e.target.name == "Writenote")
+    {
+      setnewNoteT(e.target.value)
+    }
+  }
+
+  const buttonClick = () => {
+    // add to list with redux
+    console.log(newNoteT)
+    setnewNoteT("");
+  }
 
   return (
     <div>
@@ -42,6 +60,8 @@ function WriteNotes() {
           type="text"
           name="Writenote"
           id="Writenote"
+          value={newNoteT}
+          onChange={changeText}
           className="writeN block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
           placeholder="write your note..."
         />
@@ -108,10 +128,12 @@ function WriteNotes() {
                 ))}
               </Listbox.Options>
             </Transition>
-          </div>
+          </div>          
         </>
       )}
     </Listbox>
+
+    <button id='buttonAdd' onClick={buttonClick} >Add Note</button>
 
 
     </div>

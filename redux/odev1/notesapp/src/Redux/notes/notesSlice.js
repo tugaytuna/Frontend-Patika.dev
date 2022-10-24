@@ -4,11 +4,26 @@ import { store } from '../store'
 export const noteSlice = createSlice({
     name: "notes",
     initialState: {
-        value: {
+        value:  [{
             id: 1,
-            noteDetail: "tugay naber",
+            noteDetail: "test note",
             color: "red",
         },
+        {
+            id: 2,
+            noteDetail: "test note 2",
+            color: "yellow",
+        },
+        {
+            id: 3,
+            noteDetail: "test note 3",
+            color: "gray",
+        },
+        {
+            id: 4,
+            noteDetail: "test note 4",
+            color: "pink",
+        },]
     },
     reducers: {
        

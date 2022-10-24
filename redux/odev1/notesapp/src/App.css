@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background-color: darkgrey;
-  padding: 200px 0 200px 0;
+  padding: 50px 0 200px 0;
 }
 
 .centerB {
@@ -15,4 +15,34 @@
 
 .writeN {
   padding: 20px;
+}
+
+#buttonAdd {
+  color: whitesmoke;
+  padding: 10px;
+  background-color: rgb(13, 60, 61);
+  border-radius: 10px;
+}
+
+
+.noteList {
+  margin-top: 20px;
+  padding: 10px;
+  
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: rgb(255, 251, 0);
+}
+
+.pink {
+  background-color: rgb(255, 0, 221);
+}
+
+.gray {
+  background-color: rgb(126, 126, 126);
 }
