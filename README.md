@@ -14,4 +14,4 @@ Tugay Tuna
 
 [React](https://github.com/tugaytuna/Frontend-Patika.dev/tree/main/react)
 
-[Redux](https://github.com/tugaytuna/Frontend-Patika.dev/)
+[Redux](https://github.com/tugaytuna/Frontend-Patika.dev/tree/main/redux)
