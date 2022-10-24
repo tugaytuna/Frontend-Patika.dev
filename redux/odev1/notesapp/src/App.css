@@ -3,3 +3,16 @@
   background-color: darkgrey;
   padding: 200px 0 200px 0;
 }
+
+.centerB {
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.writeN {
+  padding: 20px;
+}
