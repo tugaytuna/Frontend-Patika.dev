@@ -33,6 +33,7 @@
 
 .red {
   background-color: red;
+  color: white;
 }
 
 .yellow {
@@ -44,5 +45,6 @@
 }
 
 .gray {
-  background-color: rgb(126, 126, 126);
+  background-color: rgb(63, 62, 62);
+  color: white;
 }

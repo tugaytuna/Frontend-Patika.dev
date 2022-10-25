@@ -1,11 +1,13 @@
 import React from 'react'
 
 import {useSelector} from 'react-redux'
-
+// import {searchText} from './SearchNotes'
 
 function ListNotes() {
 
 const notesValue = useSelector((state) => state.notes.value)
+
+
 
   return (
     <div>
@@ -15,11 +17,10 @@ const notesValue = useSelector((state) => state.notes.value)
         <h2 key={index}>{item.id}</h2>
         <h1 key={item.noteDetail}>{item.noteDetail}</h1>
         {/* <h2 key={item.color}>{item.color}</h2> */}
-       
+
         </div>
         )
       })}
-      
       
 
     </div>

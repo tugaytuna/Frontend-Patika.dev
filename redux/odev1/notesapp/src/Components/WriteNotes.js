@@ -3,6 +3,8 @@ import {useState} from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 
+import {useSelector} from 'react-redux'
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
@@ -37,9 +39,7 @@ function WriteNotes() {
   const [selected, setSelected] = useState(colors[3])
   const [newNoteT, setnewNoteT] = useState("")
 
-  const addNoteClick = () => {
-    console.log("clicked");
-  }
+  const notesValue = useSelector((state) => state.notes.value)
 
   const changeText = (e) => {
     if (e.target.name == "Writenote")
@@ -48,8 +48,12 @@ function WriteNotes() {
     }
   }
 
-  const buttonClick = () => {
+  const addNoteClick = () => {
+    //control the data is valid
+    
     // add to list with redux
+    
+    
     console.log(newNoteT)
     setnewNoteT("");
   }
@@ -133,7 +137,7 @@ function WriteNotes() {
       )}
     </Listbox>
 
-    <button id='buttonAdd' onClick={buttonClick} >Add Note</button>
+    <button id='buttonAdd' onClick={addNoteClick} >Add Note</button>
 
 
     </div>

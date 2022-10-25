@@ -30,4 +30,18 @@ export const noteSlice = createSlice({
     }
 })
 
+export const searchSlice = createSlice({
+    name: "search",
+    initialState: {
+        value: {
+            searchDetail: "test search",
+        }
+    },
+    reducers: {
+       
+    }
+})
+
+
 export default noteSlice.reducer;
+// export const searchSliceR = searchSlice.reducer;
