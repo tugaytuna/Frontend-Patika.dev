@@ -28,6 +28,8 @@ export const noteSlice = createSlice({
     reducers: {
        kkTest: (state,actions) => {
         console.log(actions.payload)
+        // console.log(state.value[1].color)
+        // state.value.push({id: 5, noteDetail: "add by call", color:"yellow"})
        }
     }
 })
