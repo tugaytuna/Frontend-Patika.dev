@@ -43,7 +43,7 @@ export const searchSlice = createSlice({
     },
     reducers: {
        setData: (state,actions) => {
-        console.log(actions.payload)
+        state.value = actions.payload;
        }
     }
 })
@@ -51,4 +51,5 @@ export const searchSlice = createSlice({
 
 export default noteSlice.reducer;
 export const {kkTest} = noteSlice.actions;
-// export const searchSliceR = searchSlice.reducer;
+export const {setData} = searchSlice.actions;
+export const searchSliceR = searchSlice.reducer;

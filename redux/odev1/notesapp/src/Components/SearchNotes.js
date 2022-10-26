@@ -4,15 +4,17 @@ import "../App.css"
 import {useSelector, useDispatch} from 'react-redux'
 import {setData,kkTest} from '../Redux/notes/notesSlice'
 
+
 function SearchNotes() {
 
   const [textIn, settextIn] = useState("")
   const dispatch = useDispatch();
-  // const searchValue = useSelector((state) => state.search.value)
+  const searchValue = useSelector((state) => state.search.value)
 
   const textChange = (e) => {
     settextIn(e.target.value)
-    dispatch(kkTest(textIn));
+    console.log(searchValue);
+    dispatch(setData(textIn));
   }
 
 
