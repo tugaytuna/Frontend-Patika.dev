@@ -1,5 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit'
-import { store } from '../store'
+// import { store } from '../store'
 
 export const noteSlice = createSlice({
     name: "notes",
@@ -26,7 +26,9 @@ export const noteSlice = createSlice({
         },]
     },
     reducers: {
-       
+       kkTest: (state,actions) => {
+        console.log(actions.payload)
+       }
     }
 })
 
@@ -38,10 +40,13 @@ export const searchSlice = createSlice({
         }
     },
     reducers: {
-       
+       setData: (state,actions) => {
+        console.log(actions.payload)
+       }
     }
 })
 
 
 export default noteSlice.reducer;
+export const {kkTest} = noteSlice.actions;
 // export const searchSliceR = searchSlice.reducer;
