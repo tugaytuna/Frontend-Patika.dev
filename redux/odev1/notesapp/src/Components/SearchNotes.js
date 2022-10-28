@@ -2,7 +2,7 @@ import {useState} from 'react'
 
 import "../App.css"
 import {useSelector, useDispatch} from 'react-redux'
-import {setData,kkTest} from '../Redux/notes/notesSlice'
+import {setData} from '../Redux/notes/notesSlice'
 
 
 function SearchNotes() {
@@ -13,7 +13,7 @@ function SearchNotes() {
 
   const textChange = (e) => {
     settextIn(e.target.value)
-    console.log(searchValue);
+    // console.log(searchValue);
     dispatch(setData(textIn));
   }
 

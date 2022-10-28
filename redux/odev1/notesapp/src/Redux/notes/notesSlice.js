@@ -26,10 +26,12 @@ export const noteSlice = createSlice({
         },]
     },
     reducers: {
-       kkTest: (state,actions) => {
-        console.log(actions.payload)
+       addNote: (state,actions) => {
+        // console.log(actions.payload)
+
         // console.log(state.value[1].color)
         // state.value.push({id: 5, noteDetail: "add by call", color:"yellow"})
+        state.value = actions.payload;
        }
     }
 })
@@ -38,7 +40,7 @@ export const searchSlice = createSlice({
     name: "search",
     initialState: {
         value: {
-            searchDetail: "test search",
+            searchDetail: "t",
         }
     },
     reducers: {
@@ -50,6 +52,6 @@ export const searchSlice = createSlice({
 
 
 export default noteSlice.reducer;
-export const {kkTest} = noteSlice.actions;
+export const {addNote} = noteSlice.actions;
 export const {setData} = searchSlice.actions;
 export const searchSliceR = searchSlice.reducer;

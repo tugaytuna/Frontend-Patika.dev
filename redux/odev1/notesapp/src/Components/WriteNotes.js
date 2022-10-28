@@ -3,7 +3,9 @@ import {useState} from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 
-import {useSelector} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux'
+
+import {addNote} from '../Redux/notes/notesSlice'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -39,6 +41,8 @@ function WriteNotes() {
   const [selected, setSelected] = useState(colors[3])
   const [newNoteT, setnewNoteT] = useState("")
 
+  const dispatch = useDispatch();
+
   const notesValue = useSelector((state) => state.notes.value)
 
   const changeText = (e) => {
@@ -50,11 +54,28 @@ function WriteNotes() {
 
   const addNoteClick = () => {
     //control the data is valid
+    // if (newNoteT = "")
+    // {
+    //   alert("Not boş olarak kaydedilemez!")
+    // }
+    // add to notes with redux
+
+    //dizinin oluşturulması
+    let updatedNotes = notesValue;
+    const newNoteId = updatedNotes.length + 1;
+    const newNoteDetail = newNoteT;
+    const newNoteColor = "red";
+
+    const newNoteObject = {id: newNoteId, noteDetail: newNoteDetail, color: newNoteColor};
+    // updatedNotes.push(newNoteObject)
+    updatedNotes = [...updatedNotes, newNoteObject]
     
-    // add to list with redux
+
+    console.log(updatedNotes)
     
+
+    dispatch(addNote(updatedNotes));
     
-    console.log(newNoteT)
     setnewNoteT("");
   }
 
