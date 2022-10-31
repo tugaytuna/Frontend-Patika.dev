@@ -1,0 +1,80 @@
+.imageBill {
+    margin-top: 50px;
+    height: 200px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: rgb(110, 110, 110);
+}
+
+.headerDiv {
+    margin: 50px 0 0 50px;
+}
+
+.products {
+    background-color: azure;
+    border: 0px;
+    border-color: rgb(59, 203, 247);
+    border-style: solid;
+    justify-content: center;
+    vertical-align: middle;
+    margin: 5px;
+    border-radius: 10px;
+    
+}
+
+.moneyLeft {
+    background-color: aqua;
+    padding: 20px 0 20px 0;
+    border: 1px;
+    border-color: rgb(204, 204, 204);
+    border-style: solid;
+    border-radius: 2%;
+}
+
+.itemCount {
+    text-align: center;
+    border-radius: 5px;
+    padding-top: 5px;
+    vertical-align: middle;
+    display: table-cell;
+    margin: 0 3px 0 3px;
+    margin-bottom: 5px;
+}
+
+.buyBtn {
+    background-color: green;
+    color: white;
+    padding: 5px 25px 0 0;
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
+
+.sellBtn {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 25px 0 0;
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
+
+.productImage {
+    height: 100px;
+    width: 100px;
+}
+
+.test1 {
+    display: flex;
+    text-align: center;
+    /* margin: 10px 10px 10px 10px; */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+
+}
+
+
