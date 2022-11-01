@@ -43,24 +43,34 @@
 
 .buyBtn {
     background-color: green;
+    
     color: white;
-    padding: 5px 25px 0 0;
+    /* padding: 5px 25px 0 0; */
+    height: 25px;
+    width: 60px;
     border-radius: 5px;
     text-align: center;
     justify-content: center;
     vertical-align: middle;
     margin-bottom: 5px;
+    box-shadow:0 1px 2px #5e5d5b;
+    align-items: center;
+
+    
 }
 
 .sellBtn {
     background-color: red;
     color: white;
     border-radius: 5px;
-    padding: 5px 25px 0 0;
+    /* padding: 5px 25px 0 0; */
+    height: 25px;
+    width: 60px;
     text-align: center;
     justify-content: center;
     vertical-align: middle;
     margin-bottom: 5px;
+    box-shadow:0 1px 2px #5e5d5b;
 }
 
 .productImage {
@@ -69,7 +79,7 @@
 }
 
 .test1 {
-    display: flex;
+    display: block;
     text-align: center;
     /* margin: 10px 10px 10px 10px; */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);

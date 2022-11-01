@@ -1,4 +1,4 @@
-import React from 'react'
+import {useState} from 'react'
 
 import {useSelector} from 'react-redux'
 
@@ -39,20 +39,35 @@ function Products() {
 ];
 
 const moneyLeft = useSelector((state) => state.money.moneyleft)
+const [inputCount, setinputCount] = useState(0)
+
+const buyButtonHandle = (e) => {
+    // console.log(`${inputCount} adet, ${prom})
+    console.log(e)
+}
+
+const sellButtonHandle = () => {
+    
+}
+
+const inputChangeHandle = (e) => {
+    setinputCount(e.target.value)
+
+}
 
   return (
     <div>
-        <h3 className='moneyLeft' >{moneyLeft}</h3>
+        <h3 className='moneyLeft' >${moneyLeft}</h3>
         {allProducts.map((item) => {
             return (
                 <div className='test1'>
                 <div key={item.name} className='products'>
                     <img className='productImage' key={item.img} src={item.img}></img>
                     <h2 key={item.id}>{item.name}</h2>
-                    <h2 key={item.price}>{item.price}</h2>
-                    <button className='sellBtn'>Sell</button>
-                    <input className='itemCount' type="number" value={0}></input>
-                    <button className='buyBtn'>Buy</button>
+                    <h2 key={item.price}>${item.price}</h2>
+                    <button key={item.id} className='sellBtn' onClick={sellButtonHandle}>Sell</button>
+                    <input onChange={inputChangeHandle}  className='itemCount' type="number" value={inputCount}></input>
+                    <button propt={item.id} key={item.id} className='buyBtn' onClick={buyButtonHandle}>Buy</button>
                 </div>
                 </div>
             )
