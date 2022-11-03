@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 
-import {useSelector} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux'
+import {buySome, sellSome, pieceIn, pieceOut, allUpdate} from '../redux/moneySlice'
 
 
 
@@ -45,6 +46,7 @@ function Products() {
 
 
 const [allProducts, setAllProducts] = useState(allProductsTemp)
+const allProductsRe = useSelector((state) => state.products.products)
 const moneyLeft = useSelector((state) => state.money.moneyleft)
 const [inputCount, setinputCount] = useState(0)
 
@@ -55,19 +57,32 @@ const basket = basketInit
 //     console.log("something change")
 // },[allProducts])
 
+const dispatch = useDispatch();
+
+
 const buyButtonHandle = (e) => {
     const kk = allProducts[e.target.name -1].piece;
+    const kkP = allProducts[e.target.name -1].price;
     allProductsTemp[e.target.name -1].piece = kk +1;
 
+
+    //money reduces
+    dispatch(buySome(kkP));
+
     setAllProducts([...allProductsTemp])
- 
+    
+    dispatch(allUpdate(allProducts))
 
 }
 
 const sellButtonHandle = (e) => {
     //check count shouldn't be lower from zero
     const kk2 = allProducts[e.target.name -1].piece;
+    const kkP2 = allProducts[e.target.name -1].price;
     allProductsTemp[e.target.name -1].piece = kk2 -1;
+
+    dispatch(sellSome(kkP2));
+
 
     setAllProducts([...allProductsTemp])
 }
@@ -80,7 +95,7 @@ const inputChangeHandle = (e) => {
   return (
     <div>
         <h3 className='moneyLeft' >${moneyLeft}</h3>
-        {allProducts.map((item) => {
+        {allProductsRe.map((item) => {
             return (
                 <div key={item.id+"test"} className='test1'>
                 <div key={item.name+"productsDiv"} className='products'>
