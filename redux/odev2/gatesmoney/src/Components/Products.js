@@ -102,7 +102,7 @@ const inputChangeHandle = (e) => {
                     <img className='productImage' key={item.img} src={item.img}></img>
                     <h2 key={item.name}>{item.name}</h2>
                     <h2 key={item.price}>${item.price}</h2>
-                    <button name={item.id} key={item.id+"sellbtn"} className='sellBtn' onClick={sellButtonHandle}>Sell</button>
+                    <button name={item.id} key={item.id+"sellbtn"} className={(item.piece < 1) ? "disable" : "sellBtn"}  onClick={sellButtonHandle}>Sell</button>
                     <input onChange={inputChangeHandle} className='itemCount'  value={item.piece}></input>
                     <button name={item.id} key={item.id+"buybtn"} className='buyBtn' onClick={buyButtonHandle}>Buy</button>
                 </div>
