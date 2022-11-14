@@ -45,3 +45,30 @@ code {
 input {
   text-align: center;
 }
+
+.yesbutton {
+   background-color: green;
+   color: white;
+   padding: 10px 20px;
+   
+}
+
+.yesbutton:hover {
+  border: 1px white solid;
+}
+
+.nobutton:hover {
+  border: 1px white solid;
+}
+
+.nobutton {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+   
+}
+
+
+.selectedButton {
+  border: 1px white solid;
+}
