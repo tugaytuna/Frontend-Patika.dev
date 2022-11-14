@@ -5,9 +5,68 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ecf35d;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.textandmark {
+  justify-content: center;
+  display: inline;
+  /* background-color: #ecf189; */
+  display:flex;
 }
+
+
+.headerT {
+  text-align: center;
+  box-shadow: 10px;
+  color: gray;
+}
+
+.text {
+  margin: 15px;
+  width: 40%;
+  height: 500px;
+  background-color: #ecf189;
+  color:black;
+  text-align: center;
+  vertical-align: text-top;
+  
+
+  border-color: #e6f032;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+
+  
+}
+
+.markdown {
+  margin: 15px;
+  display: block;
+  width: 40%;
+  height: 500px;
+  background-color: #ecf189;
+  color: black;
+  text-align: center;
+
+  border-color: #e6f032;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.question {
+  background-color: #f08959;
+  border-style: none;
+  width: 50px;
+  height: 50px;
+  color: white;
+
+  margin: 15px 15px 15px 90%;
+  display:inherit;
+}
+
+.question:hover {
+  border: white 2px solid;
+}
+
