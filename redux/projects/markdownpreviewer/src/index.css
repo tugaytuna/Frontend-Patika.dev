@@ -25,7 +25,7 @@ body {
 .text {
   margin: 15px;
   width: 40%;
-  height: 500px;
+  height: auto;
   background-color: #ecf189;
   color:black;
   text-align: center;
@@ -40,7 +40,9 @@ body {
   overflow-wrap: break-word;
   hyphens: manual;
 
-  
+  word-wrap: break-word;
+  word-break: break-all;
+
 }
 
 .markdown {
