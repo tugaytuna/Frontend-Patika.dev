@@ -1,0 +1,18 @@
+.RandomTextBox {
+    background-color: rgb(168, 172, 172);
+    width: auto;
+    height: 100px;
+    margin: 50px 20px 20px 20px;
+    font-size: 24px;
+    text-align: center;
+    justify-content: center;
+}
+
+.bold {
+    background-color: aqua;
+}
+
+input {
+    margin: 5px;
+    text-align: center;
+}
