@@ -1,13 +1,15 @@
 import React from 'react'
 import './style.css'
-
+import {useSelector, useDispatch} from 'react-redux'
+import {nextOne} from '../redux/counterSlice'
 
 
 function RandomText() {
 
 const randomVocab = ["yeni","türkçe","hızlı","yazma","motive","klavye","müzik","bilgisayar","test","elma", "tugay", "selam", "merhaba", "deneme", "farklı", "kelime", "programlama", "sada"];
-const counter = 0;
+// const counter = 0;
 
+const counter = useSelector((state) => state.counter.counterL)
 
 
   return (
