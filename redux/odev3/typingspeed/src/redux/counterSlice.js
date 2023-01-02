@@ -24,6 +24,12 @@ export const timerSlice = createSlice({
         startTimer: (state) => {
             state.timerL = 60
         },
+        tickMinus: (state,actions) => {
+            if (state.timerL > 0) 
+            { 
+                state.timerL -= 1 
+            }
+        }
 
     }
 })
@@ -32,4 +38,4 @@ export default counterSlice.reducer;
 export const {nextOne} = counterSlice.actions;
 
 export const timerSliceR = timerSlice.reducer;
-export const {stopTimer, startTimer} = timerSlice.actions;
+export const {stopTimer, startTimer, tickMinus} = timerSlice.actions;

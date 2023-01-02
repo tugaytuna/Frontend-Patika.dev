@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { nextOne, stopTimer, startTimer } from '../redux/counterSlice'
+import { nextOne, stopTimer, startTimer, tickMinus } from '../redux/counterSlice'
 
 function InputText() {
 
@@ -10,6 +10,7 @@ function InputText() {
   const [startStop, setStartStop] = useState("Start")
   const timerRe = useSelector((state) => state.timer.timerL)
 
+ 
 
 
   const spaceAdded = (e) => {
@@ -24,11 +25,28 @@ function InputText() {
 
   }
 
-  const timerTick = () => {
-    let kk = new Date().getSeconds();
-    
 
-    console.log(kk)
+  const timerTick = () => {
+    if (startStop == "Start")
+    {
+      dispatch(startTimer())
+      
+      setInterval(() => {
+        dispatch(tickMinus())
+      },1000)
+  
+
+    }
+    else if (startStop == "Stop")
+    {
+      dispatch(stopTimer())
+      
+    }
+
+
+
+    
+    
 
   }
 
@@ -43,7 +61,7 @@ function InputText() {
     <div>
       <a>{counter + 1}. Kelime</a>
       <input value={textInput} onChange={spaceAdded} ></input>
-      <label className='timer'>100</label>
+      <label className='timer'>{timerRe}</label>
       <button className='startbutton' onClick={buttonClick}>{startStop}</button>
     </div>
   )
