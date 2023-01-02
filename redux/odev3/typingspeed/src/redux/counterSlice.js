@@ -12,5 +12,24 @@ export const counterSlice = createSlice({
     }
 })
 
+export const timerSlice = createSlice({
+    name: "timer",
+    initialState: {
+        timerL: 60,
+    },
+    reducers: {
+        stopTimer: (state,actions) => {
+            state.timerL = 0
+        },
+        startTimer: (state) => {
+            state.timerL = 60
+        },
+
+    }
+})
+
 export default counterSlice.reducer;
 export const {nextOne} = counterSlice.actions;
+
+export const timerSliceR = timerSlice.reducer;
+export const {stopTimer, startTimer} = timerSlice.actions;

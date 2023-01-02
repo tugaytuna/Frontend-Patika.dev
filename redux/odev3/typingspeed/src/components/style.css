@@ -26,3 +26,29 @@ input {
     text-align: center;
 
 }
+
+.startbutton {
+    width: 100px;
+    background-color: rgb(168, 172, 172);
+    color: white;
+    border-radius: 5px;
+    vertical-align:middle;
+}
+
+
+.startbutton:hover {
+    background-color: rgb(38, 39, 39);
+    color: white;
+}
+
+.timer {
+    border: 2px;
+    border-style: solid;
+    vertical-align: middle;
+    justify-content: center;
+    margin: 0 10px 0 10px;
+    font-size: 14px;
+    padding: 5px;
+    background-color: rgb(168, 172, 172);
+    color: white;
+}
