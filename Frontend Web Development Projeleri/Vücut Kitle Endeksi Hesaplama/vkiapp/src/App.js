@@ -1,8 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import BMIHesapla from './Components/BMIHesapla';
 import BMINedir from './Components/BMINedir';
 import Header from './Components/Header';
+import Result from './Components/Result';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Header></Header>
      <BMIHesapla>
      </BMIHesapla>
-     <BMINedir></BMINedir>
+     <Result></Result>
     </div>
   );
 }

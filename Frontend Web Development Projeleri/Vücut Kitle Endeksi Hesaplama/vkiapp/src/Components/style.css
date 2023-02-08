@@ -1,0 +1,49 @@
+.navBtn {
+    padding: 10px 20px;
+    margin: 40px 15px 30px 15px;
+    background-color: #CDE990;
+    border: 2px solid #BFDB38;
+    border-radius: 10px;
+    color: #473C33;
+}
+
+.navBtn:hover {
+    background-color: #AACB73;
+}
+
+label {
+    color: #473C33;
+    margin: 5px;
+}
+
+input {
+    text-align: center;
+}
+
+#age {
+    width: 30px;
+    margin: 10px 0px;
+}
+
+
+.radioButton{
+    accent-color: #AACB73;
+}
+
+.hewe {
+    margin: 10px 5px;
+    width: 50px;
+}
+
+.calcBtn {
+    padding: 7px 40px;
+    margin: 10px;
+    background-color: #CEEDC7;
+    border: 2px solid #E5FDD1;
+    border-radius: 10px;
+    color: #473C33;
+}
+
+.calcBtn:hover {
+    background-color: #b9eead;
+}
