@@ -9,6 +9,7 @@ function BMIHesapla() {
   const [weight, setWeight] = useState(65);
   const [gender, setGender] = useState(1);
   
+  const [bmi, setBmi] = useState(1)
 
 
   const calculate = () => {
@@ -20,10 +21,14 @@ function BMIHesapla() {
     else 
     {
       console.log(age,height,weight,gender)
+      setBmi(weight / (height * height))
+      console.log(bmi * 10000)
     }
 
-
     
+        
+
+      
 
   }
 
