@@ -9,7 +9,7 @@ function BMIHesapla() {
   const [weight, setWeight] = useState(65);
   const [gender, setGender] = useState(1);
   
-  const [bmi, setBmi] = useState(1)
+  const [bmi, setBmi] = useState()
 
 
   const calculate = () => {
@@ -21,8 +21,13 @@ function BMIHesapla() {
     else 
     {
       console.log(age,height,weight,gender)
-      setBmi(weight / (height * height))
-      console.log(bmi * 10000)
+      const calc = weight / (height * height)
+      
+      let newCalc = calc * 10000;
+      newCalc = Number.parseFloat(newCalc).toFixed(2);
+
+      setBmi(newCalc)
+      
     }
 
     
@@ -30,6 +35,13 @@ function BMIHesapla() {
 
       
 
+  }
+
+  const testFonc = () => {
+    setAge(24);
+    setGender("Male");
+    setHeight(170);
+    setWeight(55);
   }
 
 
@@ -57,6 +69,10 @@ function BMIHesapla() {
       <br></br>
       <button onClick={calculate} className='calcBtn' >Calculate</button>  
 
+      <button onClick={testFonc} id='tempTest'>Test</button>
+
+      <h1>{bmi} BMI</h1>
+      
 
     </div>
   )
