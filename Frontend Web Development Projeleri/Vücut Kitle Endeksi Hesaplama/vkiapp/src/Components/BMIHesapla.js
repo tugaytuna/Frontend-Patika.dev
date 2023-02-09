@@ -21,10 +21,11 @@ function BMIHesapla() {
 
     console.log(age,height,weight,gender)
 
+  }
 
 
-
-
+  const radioBtnClick = (w) => {
+      console.log(w, "denem")
   }
 
   return (
@@ -33,9 +34,9 @@ function BMIHesapla() {
       <input id='age' onClick={() => {if(age == "0"){setAge("")}}} type={"text"} onChange={(e) => {setAge(e.target.value)}} value={age}></input>
       <br></br>
       <label>Gender: </label>
-      <input className='radioButton' type={"radio"} id="female" name="Gender" value="Female" ></input>
+      <input checked={radioBtnClick("f")} className='radioButton' type={"radio"} id="female" name="Gender" value="Female" ></input>
       <label htmlFor="female" >Female</label>
-      <input className='radioButton' type={"radio"} id="male" name="Gender"  value="Male" ></input>
+      <input onChange={radioBtnClick("m")} className='radioButton' type={"radio"} id="male" name="Gender"  value="Male" ></input>
       <label htmlFor="male" >Male</label>
       <br></br>
       <label>Height</label>
