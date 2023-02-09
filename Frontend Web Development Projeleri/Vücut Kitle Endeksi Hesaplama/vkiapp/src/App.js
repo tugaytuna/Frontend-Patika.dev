@@ -11,6 +11,7 @@ function App() {
      <BMIHesapla>
      </BMIHesapla>
      <Result></Result>
+     <BMINedir></BMINedir>
     </div>
   );
 }

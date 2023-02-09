@@ -47,3 +47,11 @@ input {
 .calcBtn:hover {
     background-color: #b9eead;
 }
+
+.result {
+    margin: 10px 20%;
+    background-color: #aaa29c;
+
+}
+
+

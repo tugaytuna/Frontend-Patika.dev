@@ -12,7 +12,7 @@ function Header() {
   return (
     <div>
         <nav>
-            <button className='navBtn'>BMI</button>
+            <button  className='navBtn'>BMI</button>
             <button className='navBtn'>What's BMI</button>
             {/* <button className='navBtn'>About Us</button> */}
         </nav>

@@ -4,6 +4,7 @@
     "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.11.8",
     "antd": "^5.2.0",
+    "react-router-dom": "^6.8.1",
     "styled-components": "^5.3.6"
   }
 }

@@ -1,12 +1,33 @@
-import React from 'react'
-
+import {useState, useEffect} from 'react'
 import "./style.css"
 
+
 function BMIHesapla() {
+
+  const [age, setAge] = useState(0);
+  const [height, setHeight] = useState(65);
+  const [weight, setWeight] = useState(180);
+  const [gender, setGender] = useState(1);
+  
+
+
+  const calculate = () => {
+    //check inputs
+    if (age < 2 || age > 120)
+    {
+      console.log("mistake")
+    }
+
+
+
+
+
+  }
+
   return (
     <div>
       <label>Age: </label>
-      <input id='age' type={"text"}></input>
+      <input id='age' onClick={() => {if(age == "0"){setAge("")}}} type={"text"} onChange={(e) => {setAge(e.target.value)}} value={age}></input>
       <br></br>
       <label>Gender: </label>
       <input className='radioButton' type={"radio"} id="female" name="Gender" value="Female" ></input>
@@ -21,9 +42,8 @@ function BMIHesapla() {
       <input className='hewe' type={"text"}></input>
 
       <br></br>
-      <button className='calcBtn' >Calculate</button>  
+      <button onClick={calculate} className='calcBtn' >Calculate</button>  
 
-      <hr></hr>
 
     </div>
   )
