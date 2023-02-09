@@ -5,8 +5,8 @@ import "./style.css"
 function BMIHesapla() {
 
   const [age, setAge] = useState(0);
-  const [height, setHeight] = useState(65);
-  const [weight, setWeight] = useState(180);
+  const [height, setHeight] = useState(180);
+  const [weight, setWeight] = useState(65);
   const [gender, setGender] = useState(1);
   
 
@@ -17,6 +17,9 @@ function BMIHesapla() {
     {
       console.log("mistake")
     }
+
+
+    console.log(age,height,weight,gender)
 
 
 
@@ -36,10 +39,10 @@ function BMIHesapla() {
       <label htmlFor="male" >Male</label>
       <br></br>
       <label>Height</label>
-      <input className='hewe' type={"text"}></input>
+      <input onClick={() => {if(height == 180){setHeight("")}}} onChange={(e) => {setHeight(e.target.value)}} value={height} className='hewe' type={"text"}></input>
       
       <label>Weight</label>
-      <input className='hewe' type={"text"}></input>
+      <input onClick={() => {if(weight == 65){setWeight("")}}} onChange={(e) => {setWeight(e.target.value)}} value={weight}  className='hewe' type={"text"}></input>
 
       <br></br>
       <button onClick={calculate} className='calcBtn' >Calculate</button>  
