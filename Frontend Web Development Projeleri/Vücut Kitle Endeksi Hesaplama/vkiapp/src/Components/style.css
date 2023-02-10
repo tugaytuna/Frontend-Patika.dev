@@ -49,9 +49,31 @@ input {
 }
 
 .result {
-    margin: 10px 20%;
-    background-color: #aaa29c;
+    margin: 10px 30%;
+    background-color: #f5ede7;
 
 }
 
+.Normal {
+    color: green;
+}
 
+.Severe {
+    color: red;
+}
+
+.Moderate {
+    color: pink;
+}
+
+.Mild {
+    color: yellow;
+}
+
+.Overweight {
+    color: yellow;
+}
+
+.Obese {
+    color: red;
+}

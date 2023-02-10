@@ -10,6 +10,7 @@ function BMIHesapla() {
   const [gender, setGender] = useState(1);
   
   const [bmi, setBmi] = useState()
+  const [resultCateg, setResultCateg] = useState("");
 
 
   const calculate = () => {
@@ -33,7 +34,43 @@ function BMIHesapla() {
     }
 
     function makeResult(){
-      console.log("kk result")
+      let resultCategory = "";
+
+      if (bmi < 16) {
+        resultCategory = "Severe Thinness";
+      }
+      else if (bmi > 16 && bmi < 17)
+      {
+        resultCategory = "Moderate Thinness";
+      }
+      else if (bmi > 17 && bmi < 18.5)
+      {
+        resultCategory = "Mild Thinness";
+      }
+      else if (bmi > 18.5 && bmi < 25)
+      {
+        resultCategory = "Normal";
+      }
+      else if (bmi > 25 && bmi < 30)
+      {
+        resultCategory = "Overweight";
+      }
+      else if (bmi > 30 && bmi < 35)
+      {
+        resultCategory = "Obese Class I";
+      }
+      else if (bmi > 35 && bmi < 40)
+      {
+        resultCategory = "Obese Class II";
+      }
+      else if (bmi > 40)
+      {
+        resultCategory = "Obese Class III";
+      }
+
+      setResultCateg(resultCategory);
+
+
     }
         
 
@@ -76,6 +113,11 @@ function BMIHesapla() {
       <button onClick={testFonc} id='tempTest'>Test</button>
 
       <h1>{bmi} BMI</h1>
+
+      <div className='result'>
+        <h2 id='resultCateg' className={resultCateg}>{resultCateg}</h2>
+      </div>
+
       
 
     </div>

@@ -10,7 +10,7 @@ function App() {
       <Header></Header>
      <BMIHesapla>
      </BMIHesapla>
-     <Result></Result>
+     {/* <Result></Result> */}
      <BMINedir></BMINedir>
     </div>
   );
