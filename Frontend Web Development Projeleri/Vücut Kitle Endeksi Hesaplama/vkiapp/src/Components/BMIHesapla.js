@@ -118,6 +118,7 @@ function BMIHesapla() {
         <h2 id='resultCateg' className={resultCateg}>{resultCateg}</h2>
       </div>
 
+      <h6>Version 1.1</h6>
       
 
     </div>
