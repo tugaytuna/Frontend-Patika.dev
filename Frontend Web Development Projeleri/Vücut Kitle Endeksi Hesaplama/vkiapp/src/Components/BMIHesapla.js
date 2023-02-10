@@ -27,10 +27,14 @@ function BMIHesapla() {
       newCalc = Number.parseFloat(newCalc).toFixed(2);
 
       setBmi(newCalc)
+
+      makeResult();
       
     }
 
-    
+    function makeResult(){
+      console.log("kk result")
+    }
         
 
       
